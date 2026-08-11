@@ -29,12 +29,21 @@ export default function LearningBeyondBooks() {
           <p>Children discover their voice through sport, culture, creative work, teamwork and shared school experiences.</p>
         </div>
         <div className="learning-orbit" data-stagger>
-          {learningMoments.map((moment, index) => (
-            <figure className={`learning-bubble bubble-${index + 1}`} key={moment.label}>
-              <img src={moment.image} alt={`${moment.label} at Oriental Public School`} />
-              <figcaption>{moment.label}</figcaption>
-            </figure>
-          ))}
+          {[...learningMoments, ...learningMoments].map((moment, index) => {
+            const isClone = index >= learningMoments.length;
+            const momentIndex = index % learningMoments.length;
+
+            return (
+              <figure
+                className={`learning-bubble bubble-${momentIndex + 1} ${isClone ? 'is-clone' : ''}`}
+                key={`${moment.label}-${index}`}
+                aria-hidden={isClone ? 'true' : undefined}
+              >
+                <img src={moment.image} alt={isClone ? '' : `${moment.label} at Oriental Public School`} />
+                <figcaption>{moment.label}</figcaption>
+              </figure>
+            );
+          })}
           <span className="learning-dot dot-red" /><span className="learning-dot dot-blue" />
           <span className="learning-dot dot-gold" /><span className="learning-dot dot-cyan" />
         </div>

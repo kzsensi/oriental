@@ -20,15 +20,25 @@ export default function ToppersSection() {
       </div>
 
       <div className="section-shell topper-grid" key={activeClass} data-stagger>
-        {students.map((student, index) => (
-          <article className="topper-card" key={student.name} style={{ '--delay': `${index * 55}ms` }}>
-            <div className="topper-photo"><img src={student.image} alt={`${student.name}, Oriental Public School topper`} /></div>
-            <div className="topper-copy">
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <div><h3>{student.name}</h3><p>{student.marks}</p></div>
-            </div>
-          </article>
-        ))}
+        {[...students, ...students].map((student, index) => {
+          const isClone = index >= students.length;
+          const studentIndex = index % students.length;
+
+          return (
+            <article
+              className={`topper-card ${isClone ? 'is-clone' : ''}`}
+              key={`${student.name}-${index}`}
+              style={{ '--delay': `${studentIndex * 55}ms` }}
+              aria-hidden={isClone ? 'true' : undefined}
+            >
+              <div className="topper-photo"><img src={student.image} alt={isClone ? '' : `${student.name}, Oriental Public School topper`} /></div>
+              <div className="topper-copy">
+                <span>{String(studentIndex + 1).padStart(2, '0')}</span>
+                <div><h3>{student.name}</h3><p>{student.marks}</p></div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
