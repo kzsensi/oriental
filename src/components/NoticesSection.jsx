@@ -5,10 +5,10 @@ import { useSiteContent } from '../context/siteContent.js';
 const PAGE_SIZE = 4;
 const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 const fallbackImages = [
-  '/oriental/opssportsday.jpg',
-  '/oriental/specialday.jpg',
-  '/oriental/initiatives8.jpg',
-  '/oriental/initiatives4.png',
+  '/oriental/opssportsday.webp',
+  '/oriental/specialday.webp',
+  '/oriental/initiatives8.webp',
+  '/oriental/initiatives4.webp',
 ];
 
 function getDateParts(notice) {

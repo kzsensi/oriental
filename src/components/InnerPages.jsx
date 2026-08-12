@@ -24,7 +24,7 @@ export function AboutPage() {
     <>
       <Header />
       <main>
-        <InnerHero eyebrow={about.eyebrow} title={about.title} image="/oriental/ops3d.jpg" position="center 46%" />
+        <InnerHero eyebrow={about.eyebrow} title={about.title} image="/oriental/ops3d.webp" position="center 46%" />
 
         <section className="about-story section-shell">
           <div className="about-story-lead">
@@ -82,7 +82,7 @@ export function PrincipalPage() {
     <>
       <Header />
       <main className="principal-page">
-        <InnerHero eyebrow="Leadership at Oriental" title="From the Principal's Desk" image="/oriental/specialday.jpg" position="center 35%" />
+        <InnerHero eyebrow="Leadership at Oriental" title="From the Principal's Desk" image="/oriental/specialday.webp" position="center 35%" />
         <section className="principal-editorial section-shell">
           <div className="principal-editorial-copy">
             <p className="section-kicker">A message to students and parents</p>

@@ -627,7 +627,7 @@ button { cursor: pointer; }
   position: absolute;
   z-index: -2;
   inset: -22px;
-  background-image: url('/oriental/opssportsday.jpg');
+  background-image: url('/oriental/opssportsday.webp');
   background-position: center;
   background-size: cover;
   transform: translate3d(var(--wall-pan-x), var(--wall-pan-y), 0) scale(1.035);
@@ -764,7 +764,7 @@ button { cursor: pointer; }
   width: 96px;
   height: 96px;
   opacity: .12;
-  background: url('/oriental/opssportsday.jpg') right top / 350px auto no-repeat;
+  background: url('/oriental/opssportsday.webp') right top / 350px auto no-repeat;
   clip-path: polygon(35% 0, 100% 0, 100% 100%);
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -855,7 +855,7 @@ button { cursor: pointer; }
   box-shadow: 0 3px 8px rgba(0,0,0,.1);
 }
 .notice-reader-binding { position: absolute; z-index: 2; top: 70px; bottom: 74px; left: 0; width: 7px; background: var(--navy); }
-.notice-reader::after { content: ""; position: absolute; right: 20px; bottom: 76px; width: 180px; height: 120px; opacity: .07; background: url('/oriental/opssportsday.jpg') right bottom / 520px auto no-repeat; mix-blend-mode: multiply; pointer-events: none; }
+.notice-reader::after { content: ""; position: absolute; right: 20px; bottom: 76px; width: 180px; height: 120px; opacity: .07; background: url('/oriental/opssportsday.webp') right bottom / 520px auto no-repeat; mix-blend-mode: multiply; pointer-events: none; }
 .notice-reader-topline {
   position: relative;
   z-index: 1;
@@ -918,7 +918,7 @@ button { cursor: pointer; }
   padding: 64px 0 58px;
   color: #fff;
   background-color: var(--navy);
-  background-image: url('/oriental/opssportsday.jpg');
+  background-image: url('/oriental/opssportsday.webp');
   background-position: center 46%;
   background-size: cover;
   background-blend-mode: normal;

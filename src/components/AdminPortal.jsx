@@ -117,7 +117,7 @@ function ImageField({ label = 'Image', value, onChange, folder, compact = false 
         <label className="cms-upload-button">
           {state.uploading ? <LoaderCircle className="spin" aria-hidden="true" /> : <Upload aria-hidden="true" />}
           <span>{value ? 'Replace' : 'Choose image'}</span>
-          <input type="file" accept="image/jpeg,image/png,image/webp" disabled={state.uploading} onChange={(event) => selectFile(event.target.files?.[0])} />
+          <input type="file" accept="image/jpeg,image/webp,image/webp" disabled={state.uploading} onChange={(event) => selectFile(event.target.files?.[0])} />
         </label>
         {value && <button type="button" className="cms-icon-button" onClick={() => onChange('')} title="Remove image" aria-label="Remove image"><Trash2 /></button>}
       </div>
@@ -245,7 +245,7 @@ function LoginScreen() {
   return (
     <main className="cms-gate">
       <form onSubmit={submit}>
-        <img src="/image/logo.png" alt="Oriental Public School" />
+        <img src="/image/logo.webp" alt="Oriental Public School" />
         <p>Website administration</p>
         <h1>Welcome back</h1>
         <span>Sign in with the administrator account created in Supabase.</span>
@@ -519,7 +519,7 @@ export default function AdminPortal() {
   return (
     <div className="cms-app">
       <aside className={menuOpen ? 'open' : ''}>
-        <div className="cms-brand"><img src="/image/logo.png" alt="" /><span><strong>Oriental</strong><small>Website manager</small></span><button onClick={() => setMenuOpen(false)} aria-label="Close menu"><X /></button></div>
+        <div className="cms-brand"><img src="/image/logo.webp" alt="" /><span><strong>Oriental</strong><small>Website manager</small></span><button onClick={() => setMenuOpen(false)} aria-label="Close menu"><X /></button></div>
         <nav aria-label="Content modules">
           {modules.map(({ id, label, icon: Icon }) => <button type="button" key={id} className={active === id ? 'active' : ''} onClick={() => selectModule(id)}><Icon /><span>{label}</span>{active === id && <ChevronRight />}</button>)}
         </nav>

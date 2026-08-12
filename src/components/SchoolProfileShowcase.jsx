@@ -41,7 +41,7 @@ export default function SchoolProfileShowcase() {
     <section ref={sectionRef} className="profile-story" aria-labelledby="profile-story-title">
       <div ref={trackRef} className="profile-story-track">
         <header className="profile-story-intro">
-          <img className="profile-story-mark" src="/image/logo.png" alt="" data-parallax="7" />
+          <img className="profile-story-mark" src="/image/logo.webp" alt="" data-parallax="7" />
           <p className="section-kicker light">The school profile</p>
           <h2 id="profile-story-title">Four chapters.<br />One shared purpose.</h2>
           <p>Education, opportunity, senior learning and the school's published board profile, presented as one continuous story.</p>

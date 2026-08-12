@@ -23,6 +23,7 @@ export const routeLinks = {
 };
 
 const orientalAsset = (file) => `/oriental/${file}`;
+const localRasterAssetPattern = /^(\/(?:oriental|image)\/.+)\.(?:jpe?g|png)$/i;
 
 export const defaultSiteContent = {
   school: {
@@ -35,9 +36,9 @@ export const defaultSiteContent = {
     officePhone: '7970537422',
     callLabel: 'Principal Office: 9570537422',
     email: 'opsbokarojm@gmail.com',
-    logo: '/image/logo.png',
+    logo: '/image/logo.webp',
     principal: 'Dr Amir Hussain',
-    principalImage: '/image/principal.png',
+    principalImage: '/image/principal.webp',
   },
   nav: [
     ['Home', routeLinks.home],
@@ -58,11 +59,11 @@ export const defaultSiteContent = {
     secondaryLabel: 'Admission Enquiry',
     secondaryHref: '#admissions',
     slides: [
-      { desktop: orientalAsset('ops3d.jpg'), mobile: orientalAsset('ops3d.jpg'), position: 'center' },
-      { desktop: orientalAsset('specialday.jpg'), mobile: orientalAsset('specialday.jpg'), position: 'center' },
-      { desktop: orientalAsset('opssportsday.jpg'), mobile: orientalAsset('opssportsday.jpg'), position: 'center 38%' },
-      { desktop: orientalAsset('modesty.jpg'), mobile: orientalAsset('modesty.jpg'), position: 'center' },
-      { desktop: orientalAsset('ops.jpg'), mobile: orientalAsset('ops.jpg'), position: 'center' },
+      { desktop: orientalAsset('ops3d.webp'), mobile: orientalAsset('ops3d.webp'), position: 'center' },
+      { desktop: orientalAsset('specialday.webp'), mobile: orientalAsset('specialday.webp'), position: 'center' },
+      { desktop: orientalAsset('opssportsday.webp'), mobile: orientalAsset('opssportsday.webp'), position: 'center 38%' },
+      { desktop: orientalAsset('modesty.webp'), mobile: orientalAsset('modesty.webp'), position: 'center' },
+      { desktop: orientalAsset('ops.webp'), mobile: orientalAsset('ops.webp'), position: 'center' },
     ],
   },
   announcements: [
@@ -75,7 +76,7 @@ export const defaultSiteContent = {
     eyebrow: 'Admissions',
     title: 'Begin your child\'s journey at Oriental.',
     body: 'Speak with the school office about admission availability, required documents and the next campus visit.',
-    image: orientalAsset('specialday.jpg'),
+    image: orientalAsset('specialday.webp'),
     actionLabel: 'Call 9570537422',
     actionHref: 'tel:9570537422',
   },
@@ -83,25 +84,25 @@ export const defaultSiteContent = {
     {
       title: 'Annual Sports Day celebrates discipline, teamwork and house spirit',
       label: 'Student Life',
-      image: orientalAsset('opssportsday.jpg'),
+      image: orientalAsset('opssportsday.webp'),
       href: '#initiatives',
     },
     {
       title: 'Learning becomes memorable through culture, creativity and participation',
       label: 'Beyond Academics',
-      image: orientalAsset('specialday.jpg'),
+      image: orientalAsset('specialday.webp'),
       href: '#learning',
     },
     {
       title: 'A purpose-built campus planned for focused, future-ready learning',
       label: 'Campus',
-      image: orientalAsset('ops3d.jpg'),
+      image: orientalAsset('ops3d.webp'),
       href: '#facilities',
     },
     {
       title: 'Our students set the standard through strong board results',
       label: 'Achievement',
-      image: orientalAsset('Priyanshu.jpg'),
+      image: orientalAsset('Priyanshu.webp'),
       href: '#toppers',
     },
   ],
@@ -113,26 +114,26 @@ export const defaultSiteContent = {
   ],
   toppers: {
     classX: [
-      { name: 'Priyanshu Raj', marks: '92.6%', image: orientalAsset('Priyanshu.jpg') },
-      { name: 'Prachi Kumari', marks: '92.6%', image: orientalAsset('Prachi.jpg') },
-      { name: 'Shital Mishra', marks: '92.6%', image: orientalAsset('Shital.jpg') },
-      { name: 'Saurav Kr Agarwal', marks: '92.4%', image: orientalAsset('Saurav.jpg') },
-      { name: 'Monu Kumar', marks: '91.2%', image: orientalAsset('Monu.jpg') },
-      { name: 'Laksh Goswami', marks: '91%', image: orientalAsset('Laksh1.jpg') },
+      { name: 'Priyanshu Raj', marks: '92.6%', image: orientalAsset('Priyanshu.webp') },
+      { name: 'Prachi Kumari', marks: '92.6%', image: orientalAsset('Prachi.webp') },
+      { name: 'Shital Mishra', marks: '92.6%', image: orientalAsset('Shital.webp') },
+      { name: 'Saurav Kr Agarwal', marks: '92.4%', image: orientalAsset('Saurav.webp') },
+      { name: 'Monu Kumar', marks: '91.2%', image: orientalAsset('Monu.webp') },
+      { name: 'Laksh Goswami', marks: '91%', image: orientalAsset('Laksh1.webp') },
     ],
     classXII: [
-      { name: 'Devansh Khandelwal', marks: '96.6%', image: orientalAsset('devansh.jpg') },
-      { name: 'Saket Kumar', marks: '94.2%', image: orientalAsset('saket.jpg') },
-      { name: 'Pragya Kumari', marks: '93.8%', image: orientalAsset('pragya.jpg') },
-      { name: 'Shristy Kumari', marks: '93%', image: orientalAsset('shristy.jpg') },
-      { name: 'Suman Kr Agarwal', marks: '90.8%', image: orientalAsset('suman.jpg') },
-      { name: 'Anshika Komal', marks: '90%', image: orientalAsset('anshika.jpg') },
+      { name: 'Devansh Khandelwal', marks: '96.6%', image: orientalAsset('devansh.webp') },
+      { name: 'Saket Kumar', marks: '94.2%', image: orientalAsset('saket.webp') },
+      { name: 'Pragya Kumari', marks: '93.8%', image: orientalAsset('pragya.webp') },
+      { name: 'Shristy Kumari', marks: '93%', image: orientalAsset('shristy.webp') },
+      { name: 'Suman Kr Agarwal', marks: '90.8%', image: orientalAsset('suman.webp') },
+      { name: 'Anshika Komal', marks: '90%', image: orientalAsset('anshika.webp') },
     ],
   },
   principal: {
     name: 'Dr Amir Hussain',
     role: 'Director & Principal',
-    image: '/image/principal.png',
+    image: '/image/principal.webp',
     quote: 'Education is a lifelong process that builds understanding, moral values and the confidence to face future challenges.',
     paragraphs: [
       'Modern education is about helping every child realise and explore their potential and latent talents. Our children represent our hopes and dreams. Parents, students and the school authorities are a team, and each complements the efforts of the others.',
@@ -141,25 +142,25 @@ export const defaultSiteContent = {
     ],
   },
   management: [
-    { role: 'Director & Principal', name: 'Dr Amir Hussain', image: orientalAsset('amir hussain.jpg') },
-    { role: 'Chairman', name: 'Mr Mustaq Ahmed', image: orientalAsset('mushtaq.jpg') },
-    { role: 'Vice Principal', name: 'Mr Amit Kr Barnwal', image: orientalAsset('amitsir.jpg') },
-    { role: 'Headmistress', name: 'Mrs Rinku Roy', image: orientalAsset('rinku.png') },
-    { role: 'Shift In-charge, Senior', name: 'Mr Amarnath Ram', image: orientalAsset('amarnath.jpg') },
-    { role: 'Shift In-charge, Junior', name: 'Mrs Sapna Sinha', image: orientalAsset('sapna.png') },
+    { role: 'Director & Principal', name: 'Dr Amir Hussain', image: orientalAsset('amir hussain.webp') },
+    { role: 'Chairman', name: 'Mr Mustaq Ahmed', image: orientalAsset('mushtaq.webp') },
+    { role: 'Vice Principal', name: 'Mr Amit Kr Barnwal', image: orientalAsset('amitsir.webp') },
+    { role: 'Headmistress', name: 'Mrs Rinku Roy', image: orientalAsset('rinku.webp') },
+    { role: 'Shift In-charge, Senior', name: 'Mr Amarnath Ram', image: orientalAsset('amarnath.webp') },
+    { role: 'Shift In-charge, Junior', name: 'Mrs Sapna Sinha', image: orientalAsset('sapna.webp') },
   ],
   faculty: [
-    { subject: 'Physics', name: 'Mr Mahesh Singh', qualification: 'B.Ed, M.Sc', experience: '15+ years', image: orientalAsset('mahesh.jpg') },
-    { subject: 'Chemistry', name: 'Mr Somnath Das', qualification: 'B.Ed, M.Sc', experience: '12+ years', image: orientalAsset('somnath.jpg') },
-    { subject: 'Mathematics', name: 'Mr Sambhu Kumar', qualification: 'M.Tech', experience: '15+ years', image: orientalAsset('sambhu.jpg') },
-    { subject: 'Economics', name: 'Mr Mahmood Ansari', qualification: 'M.Com, M.Ed', experience: '10+ years', image: orientalAsset('mahmood (2).jpg') },
-    { subject: 'Accountancy', name: 'Mr Jitendra Kumar', qualification: 'M.Com, M.Ed', experience: '10+ years', image: orientalAsset('jitu.jpg') },
+    { subject: 'Physics', name: 'Mr Mahesh Singh', qualification: 'B.Ed, M.Sc', experience: '15+ years', image: orientalAsset('mahesh.webp') },
+    { subject: 'Chemistry', name: 'Mr Somnath Das', qualification: 'B.Ed, M.Sc', experience: '12+ years', image: orientalAsset('somnath.webp') },
+    { subject: 'Mathematics', name: 'Mr Sambhu Kumar', qualification: 'M.Tech', experience: '15+ years', image: orientalAsset('sambhu.webp') },
+    { subject: 'Economics', name: 'Mr Mahmood Ansari', qualification: 'M.Com, M.Ed', experience: '10+ years', image: orientalAsset('mahmood (2).webp') },
+    { subject: 'Accountancy', name: 'Mr Jitendra Kumar', qualification: 'M.Com, M.Ed', experience: '10+ years', image: orientalAsset('jitu.webp') },
   ],
   facilities: [
-    { number: '01', title: 'Learning & Academics', body: 'A structured learning environment designed to build knowledge, confidence and strong values.', image: orientalAsset('education.jpg') },
-    { number: '02', title: 'Merit & Opportunity', body: 'Recognition and scholarship support encourage students to pursue excellence across academics and activities.', image: orientalAsset('scholorship.jpg') },
-    { number: '03', title: 'Campus & Classrooms', body: 'A growing school campus planned around focused classrooms, movement and student participation.', image: orientalAsset('ops3d.jpg') },
-    { number: '04', title: 'Sports & Co-curriculars', body: 'Sports, cultural programmes and collaborative activities help students grow beyond the classroom.', image: orientalAsset('opssportsday.jpg') },
+    { number: '01', title: 'Learning & Academics', body: 'A structured learning environment designed to build knowledge, confidence and strong values.', image: orientalAsset('education.webp') },
+    { number: '02', title: 'Merit & Opportunity', body: 'Recognition and scholarship support encourage students to pursue excellence across academics and activities.', image: orientalAsset('scholorship.webp') },
+    { number: '03', title: 'Campus & Classrooms', body: 'A growing school campus planned around focused classrooms, movement and student participation.', image: orientalAsset('ops3d.webp') },
+    { number: '04', title: 'Sports & Co-curriculars', body: 'Sports, cultural programmes and collaborative activities help students grow beyond the classroom.', image: orientalAsset('opssportsday.webp') },
   ],
   legacyProfile: {
     sourceNote: 'School profile information reproduced from the existing Oriental Public School website.',
@@ -168,46 +169,46 @@ export const defaultSiteContent = {
         eyebrow: 'Lifelong learning',
         title: 'Education Services',
         body: 'Education is not just a process of giving knowledge for a future job, but a lifelong process that creates an understanding of moral and ethical values to guide one\'s life and make our students the future hope of the country.',
-        image: orientalAsset('education.jpg'),
+        image: orientalAsset('education.webp'),
       },
       {
         eyebrow: 'Merit and opportunity',
         title: 'Scholarships',
         stat: '10 Lakhs +',
         body: 'The school grants various scholarships to students for excellence in academics, games and other curriculum.',
-        image: orientalAsset('scholorship.jpg'),
+        image: orientalAsset('scholorship.webp'),
       },
       {
         eyebrow: 'Senior school profile',
         title: 'Metric And Intermediate',
         body: 'Oriental Public School, Bokaro Steel City, was established in April 1992 as an English-medium co-educational Higher Secondary (+2) School affiliated to the Central Board of Secondary Education, New Delhi.',
-        image: orientalAsset('ops3d.jpg'),
+        image: orientalAsset('ops3d.webp'),
       },
       {
         eyebrow: 'Published board profile',
         title: 'CBSE Board',
         body: 'The Central Board of Secondary Education, New Delhi. The school profile states that the institution is run by the non-profit registered educational society "Sainik Shikha Prachar Samiti".',
-        image: orientalAsset('cbse.png'),
+        image: orientalAsset('cbse.webp'),
       },
     ],
   },
   learningMoments: [
-    { label: 'Community', image: orientalAsset('specialday.jpg') },
-    { label: 'Curiosity', image: orientalAsset('initiatives1.jpg') },
-    { label: 'Teamwork', image: orientalAsset('opssportsday.jpg') },
-    { label: 'Creativity', image: orientalAsset('initiatives4.png') },
-    { label: 'Confidence', image: orientalAsset('initiatives6.jpg') },
-    { label: 'Discovery', image: orientalAsset('initiatives8.jpg') },
+    { label: 'Community', image: orientalAsset('specialday.webp') },
+    { label: 'Curiosity', image: orientalAsset('initiatives1.webp') },
+    { label: 'Teamwork', image: orientalAsset('opssportsday.webp') },
+    { label: 'Creativity', image: orientalAsset('initiatives4.webp') },
+    { label: 'Confidence', image: orientalAsset('initiatives6.webp') },
+    { label: 'Discovery', image: orientalAsset('initiatives8.webp') },
   ],
   initiatives: [
-    orientalAsset('initiatives1.jpg'),
-    orientalAsset('initiatives2.jpg'),
-    orientalAsset('initiatives3.jpg'),
-    orientalAsset('initiatives4.png'),
-    orientalAsset('initiatives5.jpg'),
-    orientalAsset('initiatives6.jpg'),
-    orientalAsset('initiatives7.jpg'),
-    orientalAsset('initiatives8.jpg'),
+    orientalAsset('initiatives1.webp'),
+    orientalAsset('initiatives2.webp'),
+    orientalAsset('initiatives3.webp'),
+    orientalAsset('initiatives4.webp'),
+    orientalAsset('initiatives5.webp'),
+    orientalAsset('initiatives6.webp'),
+    orientalAsset('initiatives7.webp'),
+    orientalAsset('initiatives8.webp'),
   ],
   about: {
     eyebrow: 'About Oriental',
@@ -227,7 +228,18 @@ export const defaultSiteContent = {
   },
 };
 
+export function normalizePublicAssetRefs(value) {
+  if (typeof value === 'string') return value.replace(localRasterAssetPattern, '$1.webp');
+  if (Array.isArray(value)) return value.map(normalizePublicAssetRefs);
+  if (!value || typeof value !== 'object') return value;
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, item]) => [key, normalizePublicAssetRefs(item)]),
+  );
+}
+
 export function mergeContent(defaults, saved) {
+  saved = normalizePublicAssetRefs(saved);
   if (!saved || typeof saved !== 'object') return defaults;
   if (Array.isArray(defaults)) return Array.isArray(saved) ? saved : defaults;
 
