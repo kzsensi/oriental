@@ -38,7 +38,7 @@ export default function Header() {
         <a href={routeLinks.home} className="identity-left" aria-label="The Oriental Public School home">
           <img src={school.logo} alt="The Oriental Public School logo" className="school-logo" />
           <div className="school-copy">
-            <h1>{school.name}</h1>
+            <span className="school-title">{school.name}</span>
             <div className="school-meta-lines">
               <p className="rte-line">{school.rte}</p>
               <p className="affiliation-line">{school.affiliation}</p>

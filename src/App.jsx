@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Agentation } from 'agentation';
 import Header from './components/Header.jsx';
+import SEO from './components/SEO.jsx';
 import HeroSlideshow from './components/HeroSlideshow.jsx';
 import AdmissionPopup from './components/AdmissionPopup.jsx';
 import LatestHighlights from './components/LatestHighlights.jsx';
@@ -13,6 +14,7 @@ import LearningBeyondBooks from './components/LearningBeyondBooks.jsx';
 import InitiativesSection from './components/InitiativesSection.jsx';
 import SchoolProfileShowcase from './components/SchoolProfileShowcase.jsx';
 import AdmissionBand from './components/AdmissionBand.jsx';
+import QuickAnswersSection from './components/QuickAnswersSection.jsx';
 import Footer from './components/Footer.jsx';
 import MotionSystem from './components/MotionSystem.jsx';
 import { AboutPage, PrincipalPage } from './components/InnerPages.jsx';
@@ -35,6 +37,7 @@ function HomePage() {
         <SchoolProfileShowcase />
         <LearningBeyondBooks />
         <InitiativesSection />
+        <QuickAnswersSection />
         <AdmissionBand />
       </main>
       <Footer />
@@ -58,6 +61,7 @@ export default function App() {
 
   return (
     <>
+      <SEO pathname={pathname} />
       <MotionSystem routeKey={pathname} />
       {content}
       {import.meta.env.DEV && <Agentation />}

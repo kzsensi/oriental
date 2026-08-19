@@ -3,7 +3,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSiteContent } from '../context/siteContent.js';
 
 export default function HeroSlideshow() {
-  const { hero } = useSiteContent();
+  const { hero, school } = useSiteContent();
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroSlides = Array.isArray(hero.slides) && hero.slides.length > 0 ? hero.slides : [];
 
@@ -47,10 +47,11 @@ export default function HeroSlideshow() {
       <div className="hero-clean-container">
         <div className="hero-clean-content">
           <p className="hero-eyebrow">{hero.eyebrow}</p>
-          <h2 className="hero-clean-title">
-            <span>{hero.title}</span>
-            <span>{hero.subtitle}</span>
-          </h2>
+          <h1 className="hero-clean-title">
+            <span>{school.shortName}</span>
+            {' '}
+            <span>Bokaro.</span>
+          </h1>
 
           <p className="hero-clean-subtitle">{hero.body}</p>
 

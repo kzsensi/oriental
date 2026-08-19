@@ -8,8 +8,26 @@ export default function AdmissionPopup() {
 
   useEffect(() => {
     if (!popup.enabled || window.sessionStorage.getItem('oriental-popup-dismissed')) return undefined;
-    const timer = window.setTimeout(() => setOpen(true), 900);
-    return () => window.clearTimeout(timer);
+
+    let revealed = false;
+    const isCompactViewport = window.matchMedia('(max-width: 680px)').matches;
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
+      setOpen(true);
+      window.removeEventListener('scroll', revealOnScroll);
+      if (timer) window.clearTimeout(timer);
+    };
+    const revealOnScroll = () => {
+      if (window.scrollY > 320) reveal();
+    };
+    const timer = isCompactViewport ? null : window.setTimeout(reveal, 4500);
+
+    window.addEventListener('scroll', revealOnScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', revealOnScroll);
+      if (timer) window.clearTimeout(timer);
+    };
   }, [popup.enabled]);
 
   const close = () => {

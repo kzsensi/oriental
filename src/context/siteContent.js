@@ -51,9 +51,9 @@ export const defaultSiteContent = {
   ],
   hero: {
     eyebrow: 'Jainamore / Bandhdih, Bokaro',
-    title: 'An Entrance to',
-    subtitle: 'Opportunity.',
-    body: 'A school community where academic purpose, character and confidence grow together.',
+    title: 'Oriental Public School',
+    subtitle: 'Bokaro.',
+    body: 'A Jainamore and Bandhdih school community where academic purpose, character and confidence grow together.',
     primaryLabel: 'Discover Oriental',
     primaryHref: routeLinks.about,
     secondaryLabel: 'Admission Enquiry',
