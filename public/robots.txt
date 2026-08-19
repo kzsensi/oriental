@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.orientalbokaro.com/sitemap.xml
+Sitemap: https://www.opsjmbokaro.in/sitemap.xml

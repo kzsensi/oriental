@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSiteContent } from '../context/siteContent.js';
 
-const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://www.orientalbokaro.com').replace(/\/+$/, '');
+const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://www.opsjmbokaro.in').replace(/\/+$/, '');
 const DEFAULT_IMAGE = `${SITE_URL}/oriental/ops3d.webp`;
 
 const pageConfig = {
